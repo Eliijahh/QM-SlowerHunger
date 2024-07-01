@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\paolo\\Documents\\GitHub\\QM-SlowerHunger\\QM-SlowerHunger\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{348D8B52-F533-4275-A374-5A44E6A46759}|QM-SlowerHunger.csproj|c:\\users\\paolo\\documents\\github\\qm-slowerhunger\\qm-slowerhunger\\patches\\mercenarypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{348D8B52-F533-4275-A374-5A44E6A46759}|QM-SlowerHunger.csproj|solutionrelative:patches\\mercenarypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{348D8B52-F533-4275-A374-5A44E6A46759}|QM-SlowerHunger.csproj|c:\\users\\paolo\\documents\\github\\qm-slowerhunger\\qm-slowerhunger\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{348D8B52-F533-4275-A374-5A44E6A46759}|QM-SlowerHunger.csproj|solutionrelative:plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Plugin.cs",
+              "DocumentMoniker": "C:\\Users\\paolo\\Documents\\GitHub\\QM-SlowerHunger\\QM-SlowerHunger\\Plugin.cs",
+              "RelativeDocumentMoniker": "Plugin.cs",
+              "ToolTip": "C:\\Users\\paolo\\Documents\\GitHub\\QM-SlowerHunger\\QM-SlowerHunger\\Plugin.cs",
+              "RelativeToolTip": "Plugin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T21:08:24.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MercenaryPatch.cs",
+              "DocumentMoniker": "C:\\Users\\paolo\\Documents\\GitHub\\QM-SlowerHunger\\QM-SlowerHunger\\Patches\\MercenaryPatch.cs",
+              "RelativeDocumentMoniker": "Patches\\MercenaryPatch.cs",
+              "ToolTip": "C:\\Users\\paolo\\Documents\\GitHub\\QM-SlowerHunger\\QM-SlowerHunger\\Patches\\MercenaryPatch.cs",
+              "RelativeToolTip": "Patches\\MercenaryPatch.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T21:13:18.384Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
