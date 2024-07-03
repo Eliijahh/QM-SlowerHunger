@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BepInEx.Configuration;
 
 namespace SlowerHunger
 {
@@ -18,6 +19,7 @@ namespace SlowerHunger
         private const string modName = "Slower Hunger";
         private const string modVersion = "1.0.0.0";
 
+        public static ConfigEntry<float> HungerRateMultiplier;
         private readonly Harmony harmony = new Harmony(modGUID);
 
         private static SlowerHunger Instance;
@@ -30,6 +32,8 @@ namespace SlowerHunger
             {
                 Instance = this;
             }
+
+            HungerRateMultiplier = Config.Bind("General", "HungerRateMultiplier", 0.5f, "The multiplier to increase or reduce the hunger rate");
 
             mls = BepInEx.Logging.Logger.CreateLogSource(modGUID);
 

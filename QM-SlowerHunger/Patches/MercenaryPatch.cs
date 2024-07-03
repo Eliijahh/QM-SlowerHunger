@@ -24,8 +24,9 @@ namespace SlowerHunger.Patches
         static void transformCurrentLevelToFloat(StarvationEffect __instance, int __state)
         {
 
+            float hungerRateMultiplier = SlowerHunger.HungerRateMultiplier.Value; // Use the configurable value
             int oldHungerLevel = __state;
-            int actualHungerLevel = Mathf.RoundToInt(oldHungerLevel - ( (oldHungerLevel - __instance.CurrentLevel) * 0.5f ));
+            int actualHungerLevel = Mathf.RoundToInt(oldHungerLevel - ( (oldHungerLevel - __instance.CurrentLevel) * hungerRateMultiplier));
 
             Console.WriteLine($"Level of Hunger in Postfix is equal to: {__instance.CurrentLevel}, while the actual hunger level should be {actualHungerLevel}");
 
