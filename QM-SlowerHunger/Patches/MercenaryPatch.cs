@@ -10,20 +10,33 @@ using UnityEngine;
 
 namespace SlowerHunger.Patches
 {
+    [HarmonyPatch(typeof(StarvationEffect), "ProcessActionPoint")]
     class Patches
     {
-        [HarmonyPatch(typeof(Mercenary), ("GetStarvMult"))]
-        [HarmonyPostfix]
-        static void decreaseHungerMultiplier(ref float __result)
+        [HarmonyPrefix]
+        static void saveInitialCurrentLevel(StarvationEffect __instance, out int __state)
         {
-            __result = __result * 0.01f;
+            __state = __instance.CurrentLevel;
+            Console.WriteLine($"Level of Hunger in Prefix is equal to: {__state}");
         }
 
-        [HarmonyPatch(typeof(StarvationEffect), ("ProcessActionPoint"))]
         [HarmonyPostfix]
-        static void transformCurrentLevelToFloat(StarvationEffect __instance, ref float num)
+        static void transformCurrentLevelToFloat(StarvationEffect __instance, int __state)
         {
-            Traverse.Create(__instance).Property("CurrentLevel").SetValue(((float)__instance.Delta + num) * __instance.Mult);
+
+            int oldHungerLevel = __state;
+            int actualHungerLevel = Mathf.RoundToInt(oldHungerLevel - ( (oldHungerLevel - __instance.CurrentLevel) * 0.5f ));
+
+            Console.WriteLine($"Level of Hunger in Postfix is equal to: {__instance.CurrentLevel}, while the actual hunger level should be {actualHungerLevel}");
+
+            if( actualHungerLevel >= oldHungerLevel) 
+            {
+                actualHungerLevel--;
+            }
+
+            Traverse.Create(__instance).Property("CurrentLevel").SetValue(actualHungerLevel);
+
+            //Traverse.Create(__instance).Property("CurrentLevel").SetValue(Mathf.RoundToInt(__instance.CurrentLevel + ((__instance.CurrentLevel - __state)*0.01f)));
         }
     }
 }
